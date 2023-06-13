@@ -22,7 +22,7 @@ namespace WinFormsApp4
         private void DrawWater(Graphics g)
         {            
             Rectangle waterRect = new Rectangle(0, ClientSize.Height / 2 + 10, ClientSize.Width, ClientSize.Height / 2);
-            using (LinearGradientBrush waterBrush = new LinearGradientBrush(waterRect, Color.DarkBlue, Color.LightBlue, LinearGradientMode.Vertical))
+            using (LinearGradientBrush waterBrush = new LinearGradientBrush(waterRect, Color.DarkBlue, ColorTranslator.FromHtml("#007896"), LinearGradientMode.Vertical))
             {
                 g.FillRectangle(waterBrush, waterRect);
             }
@@ -49,8 +49,8 @@ namespace WinFormsApp4
 
         private void DrawShip(Graphics g)
         {
-            Color shipColor = Color.DarkGray;
-            Color chimneyColor = Color.Gray;
+            Color shipColor = ColorTranslator.FromHtml("#382757");
+            Color chimneyColor = ColorTranslator.FromHtml("#72138F");
             Color windowColor = Color.Yellow;
             Color outlineColor = Color.Black;
 
